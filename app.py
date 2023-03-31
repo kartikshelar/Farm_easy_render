@@ -110,7 +110,9 @@ disease_classes_new= ['Apple Scab Leaf',
 #     disease_model_path, map_location=torch.device('cpu')))
 # disease_model.eval()
 
-disease_model= torch.hub.load('ultralytics/yolov5', 'custom', 'best.pt') 
+#disease_model= torch.hub.load('ultralytics/yolov5', 'custom', 'best.pt') 
+disease_model = pickle.load(
+    open("models/disease_model.pkl", 'rb'))
 
 def weather_fetch(city_name):
     """

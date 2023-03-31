@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"0>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style-login.css') }}">
+</head>
+
+<body>
+    <div class="contacttitle">
+    <header>
+    <h1><i class="fa-solid fa-leaf fa-shake" style="color:rgb(255,215,0)"></i><br>Welcome to Farm Easy</h1>
+	<p><i> One stop solution for all your crop needs!</i></p>
+	<hr style="background-color:yellow;">
+	</header>
+	</div>
+
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100 forwidth">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+
+
+					<h3 id="form-title">LOGIN</h3>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form method="POST" action="">
+					{{ form.hidden_tag() }}
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+
+							{{ form.username(class_="form-control") }}
+						</div>
+
+						<div class="input-group mb-2"> 
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+
+								{{ form.password(class_="form-control") }}
+						</div>
+
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 				{{ form.submit(class_="btn btn-success") }}
+				   			</div>
+					</form>
+
+				</div>
+
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Don't have an account? 
+						<a href="register" id="signuplogo" class="ml-2">   Sign Up</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- Google Translate API -->
+
+<div id="google_element">
+  <p class="lang-text">Want to change the Language of the page?<br>Please select from the options below:</p>
+</div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+  function loadGoogleTranslate() {
+    new google.translate.TranslateElement("google_element");
+  }
+</script>
+
+</body>
+
+</html>

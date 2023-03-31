@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+	<title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"0>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style-register.css') }}">
+</head>
+
+<body>
+	<div class="container h-100"><p id="intro"> 
+	<i class="fa-solid fa-tractor fa-bounce" style="color:red"></i> Hello there,<br>Join us to gain the best out of your farm by registering below : </p>
+	<hr style="background-color:red;">
+		<div class="d-flex justify-content-center h-100"> 
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<h3 id="form-title">REGISTER</h3>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+
+					<form method="POST" action="">
+						{{ form.hidden_tag() }}
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							
+							{{ form.username(class_="form-control") }}
+						</div>
+						
+						
+						
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							
+							{{ form.password(class_="form-control") }}
+						</div>
+						
+						
+
+
+
+				   		<div class="d-flex justify-content-center mt-3 login_container">
+				 			{{ form.register(class_="btn btn-success") }}
+				   		</div>
+
+					</form>
+				</div>
+
+				
+				
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Already have an account? 
+						<a href="login" id="signinlogo" class="ml-2">Login</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Google Translate API -->
+
+<div id="google_element">
+  <p class="lang-text">Want to change the Language of the page?<br>Please select from the options below:</p>
+</div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+  function loadGoogleTranslate() {
+    new google.translate.TranslateElement("google_element");
+  }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <title>Crop Result</title>
+
+  </head>
+
+<body style="background-color:white;">
+
+  <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="/" class="brand-logo teal-text" style="color:white;"><i id="leaf" class="fas fa-leaf"></i> FarmEasy</a>
+          <ul class="right hide-on-med-and-down">
+        <li><a href="crop">Crop</a></li>
+        <li><a href="#">Fertilizers</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="fertilizer-chemical">Chemical</a></li>
+                    <li><a href="fertilizer-organic">Organic</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="disease-predict">Disease</a></li>
+		<li><a href="logout">Log Out</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="crop-result-back" style="margin-top:30px;">
+      <div style="padding-top: 20px;padding-bottom: 50%;">
+    <div class="card card-body" style="justify-content: center;">
+               <h1 class="predict"><b><i class="fab fa-pagelines" style="color:rgb(46, 153, 24);"></i>
+               <br>According to the values entered,<br>the Best Crop currently for your farm should be 
+               <br><br><i style="color:rgb(46, 153, 24);font-family: 'Aclonica', sans-serif;">{{ prediction }} </i></b></h1>
+          </div>
+    </div>
+    </div>
+
+<!-- Google Translate API -->
+<hr>
+<div id="google_element">
+  <p class="lang-text">Want to change the Language of the page?<br>Please select from the options below:</p>
+</div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+  function loadGoogleTranslate() {
+    new google.translate.TranslateElement("google_element");
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <title>Disease</title>
+  </head>
+  
+  <body style="background-color:white;">
+    
+    
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="/" class="brand-logo teal-text" style="color:white;"><i id="leaf" class="fas fa-leaf"></i> FarmEasy</a>
+          <ul class="right hide-on-med-and-down">
+        <li><a href="crop">Crop</a></li>
+        <li><a href="#">Fertilizers</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="fertilizer-chemical">Chemical</a></li>
+                    <li><a href="fertilizer-organic">Organic</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="disease-predict">Disease</a></li>
+		<li><a href="logout">Log Out</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="disease-back" style="margin-top: 30px;">
+        <div style="padding-top: 5px;padding-bottom: 150px;">
+
+      <h2 class="disease-msg">
+        <b><span style="color: red;font-size: 25px;">Diseases are a serious issue when it comes to plants <i class="fas fa-bacteria"></i></span>
+            <br><span style="color:black">Find out which disease has been caught by your plant</span><span style="color: red;">!</span></b>
+      </h2>
+      
+    
+    <div class="upload-box">
+    
+      <form class="form-signin" method=post enctype=multipart/form-data>
+    
+        <h2 class="h4 image-upload" style="font-size: 1.5em;padding-top: none;width: 200%;">
+          <b>Please Upload The Image here:</b></h2>
+        <br>
+        <div>
+        <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
+        </div>
+        <br>
+        <img id="output-image" style="width: 80% !important;margin-left: 35px;" class="rounded mx-auto d-block"  >
+        <button class="btn btn-lg btn-primary btn-block" type="submit" 
+         style=
+             "font-weight: bold;
+              max-width: fit-content;
+              border:2px solid black;
+                 color: rgb(56, 255, 16);
+                 background-color: black;
+                 font-weight: bold;
+                 font-size: 1.3em;
+                 margin-left: 100px;
+                 margin-top: 10px;
+                 padding-top:10px;
+                 padding-bottom:10px;
+                 padding-left: 25px;
+                 padding-right: 25px;
+                 border-radius:30px;
+                 border: 3px solid rgb(56, 255, 16);">
+              
+              Predict</button>
+    
+    
+      </form>
+    </div>
+    
+    <script type="text/javascript" style="image-resolution: 50px;">
+      function preview_image(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+          var output = document.getElementById('output-image')
+          output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    </script>
+    
+    </div>
+      </div>
+    </div>
+
+<!-- Google Translate API -->
+<hr>
+<div id="google_element">
+  <p class="lang-text">Want to change the Language of the page?<br>Please select from the options below:</p>
+</div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+  function loadGoogleTranslate() {
+    new google.translate.TranslateElement("google_element");
+  }
+</script>
+
+
+
+</body>
+</html>

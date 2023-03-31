@@ -1,0 +1,296 @@
+body{
+    background-color:white;
+ }
+ 
+ nav ul a,
+ nav .brand-logo {
+   color: rgb(150, 255, 102);
+   font-weight: bold;
+   font-size: 1.2em;
+ }
+ 
+ nav{
+   max-width: 90%;
+   margin-left: 5%;
+   margin-right: 5%;
+   height: 60px;
+   background-color:rgb(68, 90, 189);
+   border: 0px;
+   border-radius: 0px;
+ }
+
+ nav ul{
+   float: right;
+ }
+
+ nav ul a:hover{
+   color: #fff;
+   text-decoration: none;
+ }
+
+ nav ul li{
+     display: inline-block;
+     line-height: 60px;
+     margin: 0 5px;
+ }
+
+
+.sub-menu{
+  display:none;
+}
+
+nav ul li:hover .sub-menu{
+  display: block;
+  position:absolute;
+  background-color: rgb(68, 90, 189);
+  border-radius: 40px;
+  border-top-left-radius: 0px;
+  margin-top: 0px;
+}
+
+nav ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 10px;
+  margin-left: -25px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  text-align: left;
+  padding: 15px;
+  padding-right: 30px;
+}
+
+
+ #leaf{
+   color: rgb(56, 255, 16);
+ }
+ 
+ 
+ #logo-container{
+  font-family: 'Aclonica', sans-serif;
+  text-decoration: none;
+   line-height: 60px;
+   text-align:center;
+   font-size: 1.7em;
+   /*background: linear-gradient(90deg, rgb(250, 248, 241) 0%, rgb(243, 243, 241) 150%);*/
+ }
+
+ .crop-back{
+   background-image: url(https://images.pexels.com/photos/3013440/pexels-photo-3013440.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+   margin-left: 5%;
+   margin-right: 5%;
+   height:100%;
+   background-size:100%;
+   background-repeat: no-repeat;
+   background-position-x: center;
+ }
+
+ .crop-result-back{
+  background-image: url(https://images.pexels.com/photos/2164230/pexels-photo-2164230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0px;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-position-x: center;
+  height: 100%;
+ }
+
+ .fertilizer-org-back{
+  background-image: url(https://images.pexels.com/photos/9507315/pexels-photo-9507315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-position-x: center;
+}
+
+.fertilizer-chem-back{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url(https://images.pexels.com/photos/2987081/pexels-photo-2987081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 915px;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-position-x: center;
+}
+
+.fertilizer-result-back{
+  background-image: url(https://images.pexels.com/photos/9507297/pexels-photo-9507297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: none;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-position-x: center;
+  height: 100%;
+ }
+
+.disease-back{
+  background-image: url(https://images.pexels.com/photos/2478441/pexels-photo-2478441.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  background-size:80%;
+  background-position-x: center;
+  height: 100%;
+}
+
+.disease-result-back{
+  background-image: url(https://images.pexels.com/photos/105028/pexels-photo-105028.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: none;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-position-x: center;
+  height: 100%;
+ }
+
+ .try-again-back{
+  background-image: url(https://images.unsplash.com/photo-1536094919620-d948a02d5085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: none;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-position-x: center;
+  height: 100%;
+ }
+
+ .form-control{
+  border-radius: 25px;
+ }
+
+ .form-group{
+   color: white;
+ }
+
+ .npk-cropform{
+  width: 40%;
+  height: 50%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  margin: 0px auto;
+  color: rgb(255, 255, 255);
+  border: 4px solid rgb(68, 90, 189);
+  border-radius: 65px;
+  padding: 30px 50px;
+  background-color: rgb(68, 90, 189,0.8);
+ }
+
+.predict{
+  color: black;
+  border: 4px solid rgb(250, 208, 146);
+  background-color: rgb(255, 235, 205,0.6);
+  text-align: center;
+  border-radius: 50px;
+  width: fit-content;
+  align-content: center;
+  margin-left: 9%;
+  margin-top: 4%;
+  padding: 30px;
+  padding-top: 10px;
+}
+
+.fert-msg{
+  text-align: center; 
+  margin: 0px; color: white;
+  font-family: 'Aclonica', sans-serif;
+  text-shadow:0 0 4px rgb(219, 160, 71);
+}
+
+.npk-fertilizerform{
+  width: 40%;
+  height: 50%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 100px;
+  margin: 0px auto;
+  color: rgb(255, 255, 255);
+  border: 4px solid rgb(219, 160, 71);
+  border-radius: 65px;
+  padding: 20px 50px;
+  background-color: rgb(255, 235, 205,0.7);
+}
+
+.fert-res-msg{
+  width: 75%;
+  background-color:rgba(255, 235, 205,0.7);
+  border-radius: 25px;
+  margin-left: 12%;
+  font-weight: bold;
+}
+
+.try-msg{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 50px;
+  width: fit-content;
+  align-content: center;
+  margin-left: 5%;
+  margin-top: 1%;
+  padding: 30px;
+  padding-top: 10px;
+}
+
+.disease-msg{
+  color: white;
+  font-size: 30px;
+  text-align: left;
+  border-radius: 50px;
+  width: fit-content;
+  align-content: center;
+  margin-left: 10%;
+  margin-top: 1%;
+  padding: 30px;
+  padding-top: 10px;
+}
+
+.image-upload{
+  color: white;
+}
+
+.upload-box{
+  width: 350px;
+  height: 48rem;
+  margin: 0px auto;
+  margin-left: 61%;
+  color: black;
+  border-radius: 25px;
+  padding: 10px 10px;
+  font-weight: bold;
+  background-size: 80%;
+  border: 4px solid rgb(170, 117, 37);
+  background-color:rgb(255, 235, 205,0.5);
+}
+
+.dis-res-msg{
+  width: 75%;
+  background-color:rgb(255, 235, 205,0.7);
+  border-radius: 25px;
+  margin-left: 12%;
+  font-weight: bold;
+}
+
+#google_element{
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  background-color: rgba(240, 203, 148, 0.1);
+  border:3px solid rgb(219, 160, 71);
+  border-bottom: none;
+  max-width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.lang-text{
+  font-size: 18px;
+  color: rgb(88, 111, 211);
+  font-weight: bold;
+}
+ 

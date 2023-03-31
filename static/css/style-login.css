@@ -1,0 +1,119 @@
+/*.flex-box-row {
+    display:flex;
+    padding : 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#heading{
+    text-shadow: antiquewhite;
+    font-family:cursive;
+    font-weight: 550;
+    font-size: xx-large;
+    text-align: left;
+	https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80
+}*/
+
+body,
+html {
+	margin: 0;
+	padding: 0;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.2)) ,url('https://images.unsplash.com/photo-1653228240294-a5f69a571f68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+}
+
+.contacttitle{
+    padding-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.user_card {
+    margin-top: 70px;
+    margin-left: 40%;
+	width: 350px;
+    height: 440px;
+    border-radius : 20px;
+	background : rgba(0, 0, 0, 0.8);
+	color: #fff;
+	position: relative;
+	/*box-sizing: border-box;*/
+	padding: 70px 30px;
+	margin-bottom:50px;
+}
+
+.forwidth{
+    width: 100%;
+}
+
+.form_container {
+	margin-top: 20px;
+}
+
+.login_btn:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+
+.login_container {
+	padding: 0 2rem;
+}
+
+.input-group-text {
+    background: #14c3e2 !important;
+    color: white !important;
+	border: 0 !important;
+	border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.input_user,
+.input_pass:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+
+#messages{
+	background-color: grey;
+	color: #fff;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.links{
+    margin-top: 30px;
+}
+
+#signuplogo{
+    border: 2px solid yellow;
+    border-radius: 25px;
+    color: white;
+    padding: 10px;
+}
+
+#signuplogo:hover{
+    color: black;
+    background-color: yellow;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.lang-text{
+  font-size: 18px;
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+
+#google_element{
+	padding-left:100px;
+	padding-bottom:20px;
+	padding-top:50px;
+	background-color:rgba(255,255,255,0.3);
+	border: 1px solid black;
+	border-radius:200px 200px 0px 0px;
+}

@@ -114,6 +114,7 @@ disease_classes_new= ['Apple Scab Leaf',
 #     disease_model_path, map_location=torch.device('cpu')))
 # disease_model.eval()
 
+torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
 disease_model= torch.hub.load('ultralytics/yolov5', 'custom', 'best.pt') 
 
 

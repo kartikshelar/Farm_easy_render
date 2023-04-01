@@ -29,11 +29,15 @@ import os
 
 crop_recommendation_model_path = 'models/RandomForest.pkl'
 fert_recommendation_model_path = 'models/Fert_classifier.pkl'
+#disease_model_path= "disease_model.pkl"
 crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
 fert_recommendation_model = pickle.load(
     open(fert_recommendation_model_path, 'rb'))
+
+#disease_model = pickle.load(
+#    open(disease_model_path, 'rb'))
 
 disease_classes = ['Apple___Apple_scab',
                    'Apple___Black_rot',
@@ -110,9 +114,8 @@ disease_classes_new= ['Apple Scab Leaf',
 #     disease_model_path, map_location=torch.device('cpu')))
 # disease_model.eval()
 
-#disease_model= torch.hub.load('ultralytics/yolov5', 'custom', 'best.pt') 
-disease_model = pickle.load(
-    open("models/disease_model.pkl", 'rb'))
+disease_model= torch.hub.load('ultralytics/yolov5', 'custom', 'best.pt') 
+
 
 def weather_fetch(city_name):
     """

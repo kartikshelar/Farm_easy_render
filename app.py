@@ -27,7 +27,7 @@ from flask_bcrypt import Bcrypt
 
 import os
 
-from pyngrok import ngrok
+# from pyngrok import ngrok
 
 crop_recommendation_model_path = 'models/RandomForest.pkl'
 fert_recommendation_model_path = 'models/Fert_classifier.pkl'
@@ -228,10 +228,10 @@ app.config['SECRET_KEY'] = 'thisisasecretkey'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-ngrok.set_auth_token('2NpooMvd12fikOiVOapsjrS8qpN_2ACYCKJzcdXBKWjhQSgSC')
-port_no= 5000
-public_url = ngrok.connect(port_no).public_url
-print(public_url)
+# ngrok.set_auth_token('2NpooMvd12fikOiVOapsjrS8qpN_2ACYCKJzcdXBKWjhQSgSC')
+# port_no= 5000
+# public_url = ngrok.connect(port_no).public_url
+# print(public_url)
 
 login_manager = LoginManager()
 login_manager.init_app(app)

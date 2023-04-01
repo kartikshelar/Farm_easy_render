@@ -27,6 +27,8 @@ from flask_bcrypt import Bcrypt
 
 import os
 
+from pyngrok import ngrok
+
 crop_recommendation_model_path = 'models/RandomForest.pkl'
 fert_recommendation_model_path = 'models/Fert_classifier.pkl'
 #disease_model_path= "disease_model.pkl"
@@ -221,8 +223,15 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 #postgres://crop_recommend_database_user:fEAFBbmsacpdBdQADkgqqgiyScmQFiSe@dpg-cgj7vtubb6mo06k1ed50-a.oregon-postgres.render.com/crop_recommend_database
 app.config['SECRET_KEY'] = 'thisisasecretkey'
+
+
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
+
+ngrok.set_auth_token('2NpooMvd12fikOiVOapsjrS8qpN_2ACYCKJzcdXBKWjhQSgSC')
+port_no= 5000
+public_url = ngrok.connect(port_no).public_url
+print(public_url)
 
 login_manager = LoginManager()
 login_manager.init_app(app)

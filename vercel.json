@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.8"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.py"
+    }
+  ],
+  "env": {
+    "FLASK_APP": "app.py",
+    "DATABASE_URL": "postgresql://crop_recommend_database_user:fEAFBbmsacpdBdQADkgqqgiyScmQFiSe@dpg-cgj7vtubb6mo06k1ed50-a.oregon-postgres.render.com/crop_recommend_database"
+  }
+}

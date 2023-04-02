@@ -221,7 +221,7 @@ def predict_image(img, model= disease_model):
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///New_database.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
-#postgres://crop_recommend_database_user:fEAFBbmsacpdBdQADkgqqgiyScmQFiSe@dpg-cgj7vtubb6mo06k1ed50-a.oregon-postgres.render.com/crop_recommend_database
+#postgresql://crop_recommend_database_user:fEAFBbmsacpdBdQADkgqqgiyScmQFiSe@dpg-cgj7vtubb6mo06k1ed50-a.oregon-postgres.render.com/crop_recommend_database
 app.config['SECRET_KEY'] = 'thisisasecretkey'
 
 
@@ -323,7 +323,8 @@ def crop_prediction():
         my_prediction = crop_recommendation_model.predict(data)
         final_prediction = my_prediction[0]
         print(final_prediction)
-        return render_template('crop-result.html', prediction=final_prediction)
+        
+        return render_template('crop-result.html', nitrogen=N, phosphorous=P, Potassium=K, rainfall=rainfall, ph=ph, state=final_features[0][5], city=city, prediction=final_prediction)
     
     else:
 

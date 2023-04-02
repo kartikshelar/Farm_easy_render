@@ -8,7 +8,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-      <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	  <script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <title>Chemical Fertilizers</title>
@@ -20,8 +20,9 @@
     
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
-          <a id="logo-container" href="/" class="brand-logo teal-text" style="color:white;"><i id="leaf" class="fas fa-leaf"></i> FarmEasy</a>
+          <a id="logo-container" href="/" class="brand-logo teal-text"><i id="leaf" class="fas fa-leaf"></i> FarmEasy</a>
           <ul class="right hide-on-med-and-down">
+             <!--<li><a href="/">Home</a></li> -->
         <li><a href="crop">Crop</a></li>
         <li><a href="#">Fertilizers</a>
             <div class="sub-menu">
@@ -31,20 +32,21 @@
                 </ul>
             </div>
         </li>
+        
         <li><a href="disease-predict">Disease</a></li>
-		<li><a href="logout">Log Out</a></li>
+        <li><a href="logout">Log Out</a></li>
           </ul>
         </div>
       </nav>
 
-      <div class="fertilizer-chem-back" style="margin-top: 30px;">
+      <div class="fertilizer-chem-back">
   <div style="padding-top: 60px;padding-bottom: 60px;">
 
-    <h2 class="fert-msg">
-  <b><i class="fas fa-air-freshener" style="color: rgb(56, 255, 16);padding-bottom: 10px;text-shadow: none;"></i>
+    <h3 class="fert-msg">
+  <b><i class="fa-duotone fa-solid fa-spray-can-sparkles" style="color:rgb(203, 108, 14); padding-bottom: 10px;text-shadow: none;font-size: 1.4em;"></i>
     <br>Find out the most suitable Chemical Fertilizer for your crop</b>
-</h2>
-<br />
+</h3>
+<br>
 
 <div class="npk-fertilizerform"
   
@@ -189,41 +191,31 @@
     <div class="d-flex justify-content-center">
       <button
         type="submit"
-        class="btn btn-info"
-        style="
-          color: rgb(56, 255, 16);
-          background-color: black;
-          border: 2px solid black;
-          font-weight: bold;
-          height: 50px;
-          border-radius: 15px;
-          font-size: 21px;
-          margin-top: 20px;
-          margin-left: 35%;
-          max-width: fit-content;
-          min-width: 130px
-        "
-      >
+        class="btn btn-info predict-fert">
+		
         Predict
       </button>
     </div>
   </form>
 </div>
 </div>
-</div>
+
 
 <!-- Google Translate API -->
-<hr>
-<div id="google_element" style="margin-left: none;">
+<div id="google_translate_element">
   <p class="lang-text">Want to change the Language of the page?<br>Please select from the options below:</p>
 </div>
-<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-<script>
-  function loadGoogleTranslate() {
-    new google.translate.TranslateElement("google_element");
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en', includedLanguages: 'en,ar,fr,de,es,it,ja,ko,pt,ru,zh-CN,hi,bn,te,mr,ta,gu,kn,ml,pa' },
+      'google_translate_element'
+    );
   }
 </script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+</div>
 
 </body>
 </html>

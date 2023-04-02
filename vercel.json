@@ -6,6 +6,12 @@
       "use": "@vercel/python",
       "config": {
         "runtime": "python3.8"
+      },
+      "env": {
+        "PYTHONPATH": "$PYTHONPATH:/vercel/path0/lib/python3.8/site-packages"
+      },
+      "commands": {
+        "install": "apt-get update && apt-get install -y libpq-dev"
       }
     }
   ],
@@ -20,3 +26,4 @@
     "DATABASE_URL": "postgresql://crop_recommend_database_user:fEAFBbmsacpdBdQADkgqqgiyScmQFiSe@dpg-cgj7vtubb6mo06k1ed50-a.oregon-postgres.render.com/crop_recommend_database"
   }
 }
+
